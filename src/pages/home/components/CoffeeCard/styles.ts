@@ -88,6 +88,10 @@ export const FormContainer = styled.form`
     border-radius: 6px;
     cursor: pointer;
   }
+
+  span:hover {
+    background-color: ${(props) => props.theme.purple};
+  }
 `
 
 export const CoffeeQuantityInput = styled.section`
@@ -114,6 +118,15 @@ export const CoffeeQuantityInput = styled.section`
     background-color: ${(props) => props.theme['base-button']};
     color: ${(props) => props.theme.purple};
     cursor: pointer;
+  }
+
+  button:hover {
+    color: ${(props) => props.theme['purple-dark']};
+  }
+
+  button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0;
   }
 
   input {
