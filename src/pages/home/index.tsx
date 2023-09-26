@@ -1,4 +1,5 @@
 import BannerImage from '../../assets/Banner-Image.svg'
+import { coffeeList } from '../../repository/coffeeList'
 import { CoffeeCard } from './components/CoffeeCard'
 import {
   CoffeeGrid,
@@ -9,7 +10,6 @@ import {
   BannerWraper,
 } from './styles'
 import { ShoppingCart, Timer, Coffee, Package } from 'phosphor-react'
-import expressoImage from '../../assets/coffeeImages/Coffee.png'
 
 export function Home() {
   return (
@@ -23,10 +23,8 @@ export function Home() {
               qualquer hora
             </h2>
             <BenefitsBannerContainer>
-              {/* div */}
               <p>
                 <BenefitsIcons benefitsColor="yellow-dark">
-                  {/* span */}
                   <ShoppingCart size={16} weight="fill" color="white" />
                 </BenefitsIcons>
                 Compra simples e segura
@@ -56,14 +54,19 @@ export function Home() {
       </BannerContainer>
       <CoffeeGridTitle>Nossos cafés</CoffeeGridTitle>
       <CoffeeGrid>
-        <CoffeeCard
-          image={expressoImage}
-          alt="Imagem do Café"
-          categories={['TRADICIONAL']}
-          coffeeName="Expresso Tradicional"
-          coffeeDescription="O tradicional café feito com água quente e grãos moídos"
-          price="9,90"
-        />
+        {coffeeList.map((coffee) => {
+          return (
+            <CoffeeCard
+              key={coffee.name}
+              image={coffee.image}
+              alt={coffee.alt}
+              categories={coffee.categories}
+              coffeeName={coffee.name}
+              coffeeDescription={coffee.description}
+              price={coffee.price}
+            />
+          )
+        })}
       </CoffeeGrid>
     </main>
   )

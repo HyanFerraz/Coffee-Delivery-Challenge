@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CoffeeCardContainer = styled.div`
   max-width: 16rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
