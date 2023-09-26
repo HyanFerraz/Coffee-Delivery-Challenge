@@ -12,10 +12,8 @@ export const GlobalStyle = createGlobalStyle`
         box-shadow: 0 0 0 2px ${(props) => props.theme['yellow-dark']};
     }
 
-    body {
-        max-width: 1440px;
+    #root {
         margin: auto;
-        padding: 0 5rem;
         background: ${(props) => props.theme.background};
         color: ${(props) => props.theme['base-text']};
         -webkit-font-smoothing: antialiased;

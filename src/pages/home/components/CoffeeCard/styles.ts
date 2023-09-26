@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CoffeeCardContainer = styled.div`
-  max-width: 18rem;
+  max-width: 16rem;
   padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;

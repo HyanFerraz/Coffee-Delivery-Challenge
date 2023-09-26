@@ -2,12 +2,17 @@ import styled from 'styled-components'
 import backgroundblur from '../../assets/Background.svg'
 
 export const BannerContainer = styled.section`
-  width: 100%;
   background: url(${backgroundblur});
+`
+
+export const BannerWraper = styled.div`
+  max-width: 1440px;
+  padding: 5.875rem 10rem;
+  margin: auto;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 3.875rem;
+  align-items: center;
   gap: 3.5rem;
 
   h1 {
@@ -24,19 +29,15 @@ export const BannerContainer = styled.section`
     font-weight: 400;
     margin-bottom: 4.125rem;
   }
-
-  div {
-    display: flex;
-    flex-direction: column;
-  }
 `
 
-export const BenefitsBannerContainer = styled.section`
+export const BenefitsBannerContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1.25rem 2rem;
+  grid-gap: 1.25rem 0;
 
   p {
+    font-size: 1rem;
     display: flex;
     justify-content: left;
     flex: 1;
@@ -67,6 +68,10 @@ export const BenefitsIcons = styled.span<BenefitsProps>`
 `
 
 export const CoffeeGridTitle = styled.h1`
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0 10rem;
   margin-bottom: 3.375rem;
   margin-top: 2rem;
   font-family: 'Baloo 2', cursive;
@@ -79,4 +84,8 @@ export const CoffeeGrid = styled.section`
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem 2rem;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  padding: 0 10rem;
 `

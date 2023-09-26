@@ -6,17 +6,19 @@ import { CartContainer, HeaderContainer, LocaleContainer } from './styles'
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logo} alt="" />
+      <section>
+        <img src={logo} alt="" />
 
-      <nav>
-        <LocaleContainer>
-          <MapPin size={22} weight="fill" color={defaultTheme.purple} />
-          São Paulo, SP
-        </LocaleContainer>
-        <CartContainer>
-          <ShoppingCart size={22} weight="fill" />
-        </CartContainer>
-      </nav>
+        <nav>
+          <LocaleContainer>
+            <MapPin size={22} weight="fill" color={defaultTheme.purple} />
+            São Paulo, SP
+          </LocaleContainer>
+          <CartContainer>
+            <ShoppingCart size={22} weight="fill" />
+          </CartContainer>
+        </nav>
+      </section>
     </HeaderContainer>
   )
 }

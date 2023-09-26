@@ -1,16 +1,22 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   nav {
     display: flex;
     gap: 0.75rem;
   }
+
+  section {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
+
 const BaseNavContainer = styled.div`
   height: 2.375rem;
   border-radius: 6px;
