@@ -1,20 +1,19 @@
 import styled from 'styled-components'
+import { Section } from '../../layouts/styles'
 
 export const HeaderContainer = styled.div`
   nav {
     display: flex;
     gap: 0.75rem;
   }
+`
 
-  section {
-    max-width: 1440px;
-    width: 100%;
-    margin: auto;
-    padding: 2rem 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+export const HeaderWrapper = styled.section`
+  ${Section}
+  padding: 2rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const BaseNavContainer = styled.div`

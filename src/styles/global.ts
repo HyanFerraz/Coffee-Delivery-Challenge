@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
     #root {
         margin: auto;
+        min-height: 100vh;
         background: ${(props) => props.theme.background};
         color: ${(props) => props.theme['base-text']};
         -webkit-font-smoothing: antialiased;

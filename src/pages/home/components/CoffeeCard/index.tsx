@@ -1,12 +1,11 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { ShoppingCart } from 'phosphor-react'
 import {
   CoffeeCardContainer,
   CoffeeCategories,
-  CoffeeQuantityInput,
   FormContainer,
   TextContainer,
 } from './styles'
-import { useState } from 'react'
+import { QuantityInput } from '../../../../components/QuantityInput'
 
 interface CoffeeProps {
   image: string
@@ -25,23 +24,6 @@ export function CoffeeCard({
   coffeeDescription,
   price,
 }: CoffeeProps) {
-  const [coffeeQuantity, setCoffeeQuantity] = useState(1)
-
-  function handleIncreaseCofffeeQuantity() {
-    setCoffeeQuantity((state) => {
-      return state + 1
-    })
-  }
-  function handleDecreaseCofffeeQuantity() {
-    setCoffeeQuantity((state) => {
-      if (state > 1) {
-        return state - 1
-      } else {
-        return state
-      }
-    })
-  }
-
   return (
     <CoffeeCardContainer>
       <div>
@@ -61,15 +43,7 @@ export function CoffeeCard({
         <label>
           R$ <strong>{price}</strong>
         </label>
-        <CoffeeQuantityInput>
-          <button type="button" onClick={handleDecreaseCofffeeQuantity}>
-            <Minus weight="bold" size={14} />
-          </button>
-          <input type="number" value={coffeeQuantity} />
-          <button type="button" onClick={handleIncreaseCofffeeQuantity}>
-            <Plus weight="bold" size={14} />
-          </button>
-        </CoffeeQuantityInput>
+        <QuantityInput />
         <span>
           <ShoppingCart weight="fill" size={20} />
         </span>

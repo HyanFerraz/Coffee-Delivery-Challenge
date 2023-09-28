@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import backgroundblur from '../../assets/Background.svg'
+import { Section } from '../../layouts/styles'
 
 export const BannerContainer = styled.section`
   background: url(${backgroundblur});
 `
 
-export const BannerWraper = styled.div`
-  max-width: 1440px;
+export const BannerWraper = styled.section`
+  ${Section}
   padding: 5.875rem 10rem;
-  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,11 +81,9 @@ export const CoffeeGridTitle = styled.h1`
 `
 
 export const CoffeeGrid = styled.section`
+  ${Section}
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem 2rem;
-  max-width: 1440px;
-  width: 100%;
-  margin: auto;
   padding: 0 10rem;
 `
